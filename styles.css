@@ -9,31 +9,81 @@
 }
 
 .container {
+    height: 100vh;
     min-height: 100vh;
     background-color: darkgray;
     display: flex;
     flex-direction: column;
 }
 
-.header, .footer {
-    flex-basis: 100%;
+.header {
+    height: 30%;
     padding: 10px;
-    background-color: white;
-    border: 2px solid black;
+    align-items: center;
+    background-color: black;
     display: flex;
-    justify-content: center;
+}
+
+.image-logo {
+    height: 200px;
+    margin: 10px;
 }
 
 .main-content {
     flex: 1 0 400px;
     padding: 20px;
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    background-color: antiquewhite;
 }
+
+.slider{
+    overflow: hidden;
+    background-color: red;
+
+}
+.slider > .slider-content{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+
+}
+
+    .slider > .slider-content > .slider-item {
+        flex: 0 0 auto;
+        width: 33.3%;
+        height: 250px;
+        border: 2px solid black;
+    }
+
+    .slider > input:nth-child(1):checked ~ .slider-content{
+        transform: translateX(0%);
+    }
+
+    .slider > input:nth-child(2):checked ~ .slider-content{
+        transform: translateX(-100%);
+    }
+    .slider > input:nth-child(3):checked ~ .slider-content{
+        transform: translateX(-200%);
+    }
+
+    .slider > input:nth-child(4):checked ~ .slider-content{
+        transform: translateX(-300%);
+    }
+
+
+.slider {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+
 
 .item {
     display: flex;
@@ -44,6 +94,37 @@
     border: 2px solid black;
 }
 
+
+
+.footer{
+    height: 20%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contato-titulo{
+    background-color: bisque;
+    font-size: 50px;
+    height: 30%;
+    width: 150px;
+}
+
+.contato-descricao{
+    background-color: blue;
+    font-size: 40px;
+    height: 50%;
+    width: 150px;
+}
+
+.contato-redes-sociais{
+    background-color: rgb(33, 95, 71);
+    font-size: 40px;
+    height: 20%;
+    width: 150px;
+}
 /* 
 flex-direction: indica o alinhamento que os itens terão por padrão no flex e Row(linha)
 
@@ -61,101 +142,3 @@ order: e a ordem que os elementos ficam alinhados
 
  align-self: e o alinhamento de um único elemento na vertical</div></div>
 */
-
-
-
-
-
-
-
-
-
-
-/*
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 20px;
-}
-
-.container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.header, .footer {
-    flex-basis: 100%;
-    padding: 10px;
-    background-color: white;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-.main-content{
-    flex: 1 0 400px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.produtos-titulo{
-    width: 100%;
-    height: 20%;
-    font-size: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.produtos-imagens{
-    width: 80%;
-    height: 70%;
-    background-color: rgb(134, 27, 102);
-    font-size: 80px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-.produtos-imagens-imagem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    height: 250px;
-    border: 2px solid black;
-}
-
-
-.produtos-imagens-imagem1{
-    width: 20%;
-    height: 90%;
-    background-color: aquamarine;
-}
-
-.produtos-imagens-imagem2{
-    width: 20%;
-    height: 90%;
-    background-color: aquamarine;
-}
-
-.produtos-imagens-imagem3{
-    width: 20%;
-    height: 90%;
-    background-color: aquamarine;
-}
-
-footer{
-    height: 25vh;
-    background-color: aquamarine;
-} */
